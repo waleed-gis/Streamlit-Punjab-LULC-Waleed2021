@@ -22,7 +22,7 @@ def app():
 
 
 
-
+    # defining auth token for Geemap form system
     def ee_initialize(token_name="EARTHENGINE_TOKEN"):
         """Authenticates Earth Engine and initialize an Earth Engine session"""
         if ee.data._credentials is None:
