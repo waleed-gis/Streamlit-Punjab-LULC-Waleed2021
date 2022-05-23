@@ -1,16 +1,15 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-from apps import home, heatmap, upload  # import your app modules here
+from apps import PU_LST, PU_LULC  # import your app modules here
 
-st.set_page_config(page_title="Streamlit Geospatial", layout="wide")
+st.set_page_config(page_title="Punjab LULC & LST (Waleed et al. 2021)", layout="wide")
 
 # A dictionary of apps in the format of {"App title": "App icon"}
 # More icons can be found here: https://icons.getbootstrap.com
 
 apps = [
-    {"func": home.app, "title": "Home", "icon": "house"},
-    {"func": heatmap.app, "title": "Heatmap", "icon": "map"},
-    {"func": upload.app, "title": "Upload", "icon": "cloud-upload"},
+    {"func": PU_LULC.app, "title": "Punjab LULC", "icon": "arrow-down-circle-fill"},
+    {"func": PU_LST.app, "title": "Punjab LST", "icon": "arrow-down-circle-fill"},
 ]
 
 titles = [app["title"] for app in apps]
@@ -36,12 +35,7 @@ with st.sidebar:
     st.sidebar.title("About")
     st.sidebar.info(
         """
-        This web [app](https://share.streamlit.io/giswqs/streamlit-template) is maintained by [Qiusheng Wu](https://wetlands.io). You can follow me on social media:
-            [GitHub](https://github.com/giswqs) | [Twitter](https://twitter.com/giswqs) | [YouTube](https://www.youtube.com/c/QiushengWu) | [LinkedIn](https://www.linkedin.com/in/qiushengwu).
-        
-        Source code: <https://github.com/giswqs/streamlit-template>
-
-        More menu icons: <https://icons.getbootstrap.com>
+        This Web app is under development: @Mirzawaleed197@gmail.com
     """
     )
 
